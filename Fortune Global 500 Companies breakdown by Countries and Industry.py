@@ -6,6 +6,8 @@ url = "https://en.wikipedia.org/wiki/Fortune_Global_500"
 requestGet = requests.get(url).text
 a = BeautifulSoup(requestGet,'html.parser')
 tables = a.find_all('table')
+
+#Finding correct table using values in table.
 for e,i in enumerate (a.find_all('table')):
     if "$486 billion" in str(i):
         index = e

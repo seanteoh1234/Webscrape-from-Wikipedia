@@ -7,6 +7,7 @@ data  = requests.get(url).text
 soup = BeautifulSoup(data,"html.parser")
 tables = soup.find_all('table')
 
+#finding table index using captions which is written as a child in the desired table.
 for index,table in enumerate(tables):
     if ("10 most densely populated countries" in str(table)):
         table_index = index

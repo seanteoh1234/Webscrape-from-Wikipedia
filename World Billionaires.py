@@ -8,6 +8,7 @@ soup = BeautifulSoup(data,'html.parser')
 
 test = (soup.find_all('p'))
 
+#using paragraph outside the desired table to find the desired table's index using find_next after getting the paragraph.
 for i in test:
     if 'In the 37th' in str(i):
         a = i.find_next('table')

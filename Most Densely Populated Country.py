@@ -5,7 +5,7 @@ import pandas as pd
 url = "https://en.wikipedia.org/wiki/World_population"
 data  = requests.get(url).text
 soup = BeautifulSoup(data,"html.parser")
-tables = soup.find_all('table') # in html table is represented by the tag <table>
+tables = soup.find_all('table')
 
 for index,table in enumerate(tables):
     if ("10 most densely populated countries" in str(table)):

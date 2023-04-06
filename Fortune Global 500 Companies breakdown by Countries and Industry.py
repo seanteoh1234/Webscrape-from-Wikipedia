@@ -5,7 +5,7 @@ import pandas as pd
 url = "https://en.wikipedia.org/wiki/Fortune_Global_500"
 requestGet = requests.get(url).text
 a = BeautifulSoup(requestGet,'html.parser')
-tables = a.find_all('table') # in html table is represented by the tag <table>
+tables = a.find_all('table')
 for e,i in enumerate (a.find_all('table')):
     if "$486 billion" in str(i):
         index = e
